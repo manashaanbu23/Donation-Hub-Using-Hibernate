@@ -1,71 +1,71 @@
-📌 Community Donation Campaign & Donor Pledge Tracking System
-Hibernate ORM Based Console Application
+📌 Donation Hub Using Hibernate
+Community Donation Campaign & Pledge Tracking System
 📖 Overview
 
-This project is a console-based Java application built using Hibernate ORM for managing community donation campaigns and donor pledge tracking.
+Donation Hub is a console-based Java application built using Hibernate ORM to manage donation campaigns, donors, pledges, and payments.
 
-The system allows a non-profit organization to:
+This system is designed for non-profit organizations to efficiently track fundraising activities with proper validation and transaction control.
 
-Manage donors
+🚀 Features
 
-Create and control campaigns
+👤 Register and manage donors
 
-Record pledges
+📢 Create and manage campaigns
 
-Track payments
+💰 Record donor pledges
 
-Close campaigns safely
+💳 Track payments against pledges
 
-Prevent unsafe donor deletion
+🔒 Close campaigns safely
 
-Hibernate is used for object-relational mapping, entity relationships, and transaction management.
+🛑 Prevent unsafe donor deletion
 
 🛠️ Tech Stack
 
-Java
+☕ Java
 
-Hibernate ORM
+🗄️ Hibernate ORM
 
-JPA Annotations
+📘 JPA Annotations
 
-Oracle Database
+🛢️ Oracle Database
 
-Maven
+📦 Maven
 
 🏗️ Project Structure
-Community-Donation-Hibernate/
+Donation-Hub-Using-Hibernate
 │
 ├── src/main/java
-│   │
 │   └── com/donate
-│        │
-│        ├── app
-│        │     └── DonateMain.java
-│        │
-│        ├── entity
-│        │     ├── Donor.java
-│        │     ├── Campaign.java
-│        │     └── Pledge.java
-│        │
-│        ├── dao
-│        │     ├── DonorDAO.java
-│        │     ├── CampaignDAO.java
-│        │     └── PledgeDAO.java
-│        │
-│        ├── service
-│        │     └── DonateService.java
-│        │
-│        └── util
-│              └── HibernateUtil.java
+│       ├── app
+│       │    └── DonateMain.java
+│       │
+│       ├── entity
+│       │    ├── Donor.java
+│       │    ├── Campaign.java
+│       │    └── Pledge.java
+│       │
+│       ├── dao
+│       │    ├── DonorDAO.java
+│       │    ├── CampaignDAO.java
+│       │    └── PledgeDAO.java
+│       │
+│       ├── service
+│       │    └── DonateService.java
+│       │
+│       └── util
+│            └── HibernateUtil.java
 │
 ├── src/main/resources
-│     └── hibernate.cfg.xml
+│       └── hibernate.cfg.xml
 │
 └── pom.xml
-🗃️ Database Tables
-1️⃣ DONOR_TBL
 
-Stores donor information:
+🗃️ Database Design
+
+🔹 DONOR_TBL
+
+Stores donor details:
 
 Donor ID (Primary Key)
 
@@ -79,9 +79,9 @@ City
 
 Status (ACTIVE / INACTIVE)
 
-2️⃣ CAMPAIGN_TBL
+🔹 CAMPAIGN_TBL
 
-Stores campaign details:
+Stores campaign information:
 
 Campaign ID (Primary Key)
 
@@ -95,15 +95,15 @@ Target Amount
 
 Status (PLANNED / ACTIVE / CLOSED)
 
-3️⃣ PLEDGE_TBL
+🔹 PLEDGE_TBL
 
-Stores pledge and payment tracking:
+Stores pledge & payment tracking:
 
-Pledge ID (Primary Key, Sequence Generated)
+Pledge ID (Sequence Generated)
 
-Donor Reference (Foreign Key)
+Donor Reference
 
-Campaign Reference (Foreign Key)
+Campaign Reference
 
 Pledge Date
 
@@ -115,110 +115,66 @@ Payment Status
 
 Writeoff Flag
 
-🔄 Core Functionalities
-
-✅ Register Donor
-
-Validates required fields
-
-Saves donor with ACTIVE status
-
-✅ Create Campaign
-
-Validates dates and target amount
-
-Saves campaign with defined status
-
-✅ Record Pledge
-
-Checks donor existence
-
-Checks campaign status
-
-Creates pledge with NOT_PAID status
-
-Managed inside Hibernate transaction
-
-✅ Record Payment
-
-Updates amount paid
-
-Automatically updates payment status
-
-Prevents overpayment
-
-✅ Close Campaign
-
-Ensures no unpaid pledges exist
-
-Updates campaign status to CLOSED
-
-✅ Remove Donor
-
-Prevents deletion if active pledges exist
-
-Deletes only when safe
-
-🔐 Hibernate Features Used
+🔐 Hibernate Concepts Used
 
 Entity Mapping
 
-@OneToMany and @ManyToOne Relationships
+One-to-Many Relationship
+
+Many-to-One Relationship
 
 Sequence Generation
 
-Session & Transaction Management
+Hibernate Session
+
+Transaction Management
 
 HQL Queries
 
 Cascade Operations
 
-Custom Business Validation
-
-▶️ Setup Instructions
+▶️ How to Run
 
 Install Oracle Database
 
 Create required tables and sequence
 
-Update database credentials in hibernate.cfg.xml
+Update DB credentials in hibernate.cfg.xml
 
 Build project using Maven
 
 Run DonateMain.java
 
-Use console menu to perform operations
+Use the console menu
 
 🎯 Learning Outcomes
 
 ORM-based development using Hibernate
 
-Entity relationship mapping
-
-Transaction management
-
 Clean layered architecture
+
+Transaction handling
 
 Business rule validation
 
-Console application design
+Console-based system design
 
-🚀 Future Enhancements
+🔮 Future Enhancements
 
-Spring Boot Integration
+Spring Boot integration
 
-REST API Version
+REST API version
 
-Web UI
+Web-based UI
 
-Reporting Dashboard
+Reporting dashboard
 
-Authentication & Role Management
+Authentication & authorization
 
-Output:
-<img width="1889" height="767" alt="image" src="https://github.com/user-attachments/assets/2986b58c-9c32-4f38-9026-28ab00cc5c80" />
+output:
 
+<img width="1919" height="736" alt="image" src="https://github.com/user-attachments/assets/f85ef74a-1cdb-4e55-b4cb-f0b9beae65b4" />
 
 👩‍💻 Author
 
-Your Manasha
+Manasha 

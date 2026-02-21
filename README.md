@@ -32,34 +32,38 @@ This system is designed for non-profit organizations to efficiently track fundra
 
 📦 Maven
 
-🏗️ Project Structure
-Donation-Hub-Using-Hibernate
+Donation-Hub-Using-Hibernate/
 │
-├── src/main/java
-│   └── com/donate
-│       ├── app
-│       │    └── DonateMain.java
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── donate/
+│       │           ├── app/
+│       │           │   └── DonateMain.java
+│       │           │
+│       │           ├── entity/
+│       │           │   ├── Donor.java
+│       │           │   ├── Campaign.java
+│       │           │   └── Pledge.java
+│       │           │
+│       │           ├── dao/
+│       │           │   ├── DonorDAO.java
+│       │           │   ├── CampaignDAO.java
+│       │           │   └── PledgeDAO.java
+│       │           │
+│       │           ├── service/
+│       │           │   └── DonateService.java
+│       │           │
+│       │           └── util/
+│       │               └── HibernateUtil.java
 │       │
-│       ├── entity
-│       │    ├── Donor.java
-│       │    ├── Campaign.java
-│       │    └── Pledge.java
-│       │
-│       ├── dao
-│       │    ├── DonorDAO.java
-│       │    ├── CampaignDAO.java
-│       │    └── PledgeDAO.java
-│       │
-│       ├── service
-│       │    └── DonateService.java
-│       │
-│       └── util
-│            └── HibernateUtil.java
+│       └── resources/
+│           └── hibernate.cfg.xml
 │
-├── src/main/resources
-│       └── hibernate.cfg.xml
-│
-└── pom.xml
+├── Query.txt
+├── pom.xml
+└── README.md
 
 🗃️ Database Design
 

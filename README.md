@@ -30,8 +30,9 @@ This system is designed for non-profit organizations to efficiently track fundra
 
 🛢️ Oracle Database
 
-📦 Maven
+## 🏗️ Project Structure
 
+```
 Donation-Hub-Using-Hibernate/
 │
 ├── src/
@@ -64,6 +65,7 @@ Donation-Hub-Using-Hibernate/
 ├── Query.txt
 ├── pom.xml
 └── README.md
+```
 
 🗃️ Database Design
 
